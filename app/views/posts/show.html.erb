@@ -9,7 +9,7 @@
 <% end %>
 <p>
   <strong>Content:</strong>
-  <%= image_tag @post.image.url %>
+  <%= image_tag @post.image.url if @post.image && @post.image.url%>
   <%= @post.content %>
 </p>
 

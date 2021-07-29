@@ -13,6 +13,7 @@
   <tbody>
       <tr>
       <% @posts.each do |post|%>
+      <%# @user.posts.each do |post|%>
       <%#= post.current_user.name%>
         <td><%= post.content %></td>
         <td><%= link_to 'Show', post %></td>
