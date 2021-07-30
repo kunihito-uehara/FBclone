@@ -6,16 +6,17 @@
   <thead>
     <tr>
       <th>Content</th>
-      <th>ユーザー名表示させたい</th>
+      <th>ユーザー名</th>
     </tr>
   </thead>
 
   <tbody>
       <tr>
       <% @posts.each do |post|%>
-      <%# @user.posts.each do |post|%>
+      <%#　 @user.posts.each do |post|%>
       <%#= post.current_user.name%>
         <td><%= post.content %></td>
+        <td><%= post.user.name %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
