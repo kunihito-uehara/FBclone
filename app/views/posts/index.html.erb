@@ -16,10 +16,10 @@
       <%#= post.current_user.name%>
         <td><%= post.content %></td>
         <td><%= post.user.name %></td>
-       <td> <%= image_tag post.image.url if post.image && post.image.url%></td>
+       　<td> <%= image_tag post.image.url if post.image && post.image.url%></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: '削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
