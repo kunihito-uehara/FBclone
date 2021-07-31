@@ -16,7 +16,13 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    if params[:back]
+      @feed = Post.new(post_params)
+    else
+      @feed = Post.new
+    end
   end
+
 
   # GET /posts/1/edit
   def edit
