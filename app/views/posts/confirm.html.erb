@@ -3,6 +3,7 @@
   <!-- 確認画面でアップロードした画像を表示させるための記述 -->
   <%= image_tag(@post.image.url) if @post.image && @post.image.url %>
   <%= form.hidden_field :image_cache %>
+  <%= @post.content %>
   <%= form.submit "投稿する" %>
 <% end %>
 <%= form_with(model:@post, url:new_post_path, local:true, method:"get") do |form| %>
